@@ -1,3 +1,4 @@
+
 const login = require("fca-unofficial");
 const fs = require("fs");
 const keepAlive = require("./server.js");
@@ -35,15 +36,6 @@ function startBot() {
 
         // تحميل ملف الإدارة الرئيسي
         require("./main.js")(api);
-
-        api.listenMqtt((err, event) => {
-            if (err) {
-                console.error("خطأ في MQTT:", err);
-                api.stopListening();
-                setTimeout(startBot, 5000);
-                return;
-            }
-        });
     });
 }
 
