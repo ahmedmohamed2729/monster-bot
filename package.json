@@ -1,0 +1,22 @@
+{
+  "name": "monster-bot",
+  "version": "1.0.0",
+  "description": "بوت فيسبوك ماسنجر احترافي باللغة العربية يعتمد على مكتبة FCA.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "facebook",
+    "messenger",
+    "bot",
+    "fca",
+    "mirai"
+  ],
+  "author": "Manus AI",
+  "license": "MIT",
+  "dependencies": {
+    "fca-unofficial": "^1.0.0",
+    "express": "^4.17.1"
+  }
+}
