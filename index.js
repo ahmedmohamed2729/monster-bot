@@ -36,7 +36,14 @@ function startBot() {
         // تحميل ملف الإدارة الرئيسي
         require("./main.js")(api);
 
-        // يتم التعامل مع الاستماع داخل main.js
+        api.listenMqtt((err, event) => {
+            if (err) {
+                console.error("خطأ في MQTT:", err);
+                api.stopListening();
+                setTimeout(startBot, 5000);
+                return;
+            }
+        });
     });
 }
 
